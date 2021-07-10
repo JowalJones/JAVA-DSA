@@ -1,7 +1,14 @@
 package complexityAndArrays;
 
 /**
- * Retrieveing an item is in constant time  
+ * Retrieveing an item whose index we know  is in constant time
+ * Retrieve with index O(n)  
+ * Adding element to full array O(n)
+ * Adding element to end of array with space O(1)
+ * Insert or update element a specific index O(1)
+ * Delete element by setting it to null O(1)
+ * Delete element by shifting elements O(n)
+ * 
  * @author jones
  *
  */
@@ -18,12 +25,17 @@ public class Arrays {
 		intArray[5] = 1;
 		intArray[6]= -22;
 		
-//		for (int i = 0; i < intArray.length; i++) { // Constant time
+//		for (int i = 0; i < intArray.length; i++) { // Constant time O(1)
 //			System.out.println(intArray[i]);
 //		}
 		
+		/**
+		 * //Finding particular item whose index we don't know
+		 * Takes linear time as we search through all items. O(n)
+		 * 
+		 */
 		int index = -1;
-		for (int i = 0; i < intArray.length; i++) { //Finding particular item 
+		for (int i = 0; i < intArray.length; i++) { 
 			if (intArray[i]==7) {
 				index = i; 
 				break;
